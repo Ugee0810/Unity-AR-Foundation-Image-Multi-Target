@@ -80,6 +80,7 @@ public class ARTrackedMultiImageManager : MonoBehaviour
         }
         else
         {
+            trackedObject.transform.position = trackedImage.transform.position;
             trackedObject.SetActive(false);
         }
     }
