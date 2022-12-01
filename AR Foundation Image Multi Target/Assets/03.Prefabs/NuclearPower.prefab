@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 5077042813230359263}
   - component: {fileID: 2883543358088679824}
   - component: {fileID: 4071406008266219784}
-  - component: {fileID: 4986149471549013031}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -195,20 +194,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4986149471549013031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871671583613908299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc44d2d20a54224da0e02b4b2e0e61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
-  fadeTime: 3
 --- !u!1 &2586942383777224970
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +457,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9000548427307790200}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -480,7 +465,7 @@ Transform:
   - {fileID: 8705112192695281102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9040216657722934540
 GameObject:
   m_ObjectHideFlags: 0

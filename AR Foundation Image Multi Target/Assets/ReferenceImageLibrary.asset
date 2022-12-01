@@ -18,62 +18,62 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5257485830484301161
-      m_GuidHigh: 4601586987746279610
+      m_GuidLow: 4875177508751682785
+      m_GuidHigh: 4301445297776325003
     m_SerializedTextureGuid:
-      m_GuidLow: 7400772717981339550
-      m_GuidHigh: 11087390434609530779
-    m_Size: {x: 0.5, y: 0.5}
-    m_SpecifySize: 1
-    m_Name: NuclearPower
-    m_Texture: {fileID: 2800000, guid: 76ae0f9ed39366b49b07f754db52de99, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5200393574389414151
-      m_GuidHigh: 11675728969019812755
-    m_SerializedTextureGuid:
-      m_GuidLow: 4946296458207976163
-      m_GuidHigh: 7049942810055861370
-    m_Size: {x: 0.5, y: 0.5}
+      m_GuidLow: 9647957997052347678
+      m_GuidHigh: 6475539018129978602
+    m_Size: {x: 1, y: 1}
     m_SpecifySize: 1
     m_Name: Aviation
-    m_Texture: {fileID: 2800000, guid: 11425ae3c66c44a47ae43230a26dd661, type: 3}
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5137110557933189165
-      m_GuidHigh: 9139311850645190046
+      m_GuidLow: 5553238728121375887
+      m_GuidHigh: 10421667877489974422
     m_SerializedTextureGuid:
-      m_GuidLow: 12115832176956622358
-      m_GuidHigh: 12617132232132900089
-    m_Size: {x: 0.5, y: 0.5}
-    m_SpecifySize: 1
-    m_Name: Housing
-    m_Texture: {fileID: 2800000, guid: 29bf4616152ca824f9b469acea0e19af, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5064464081604612785
-      m_GuidHigh: 15866271139127987133
-    m_SerializedTextureGuid:
-      m_GuidLow: 172532910235845910
-      m_GuidHigh: 17629453182472148969
-    m_Size: {x: 0.5, y: 0.5}
-    m_SpecifySize: 1
-    m_Name: Hospital
-    m_Texture: {fileID: 2800000, guid: 8aac0516f5c40264e9d7a1bd4366a8f4, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5741790478520879621
-      m_GuidHigh: 6148533733114788738
-    m_SerializedTextureGuid:
-      m_GuidLow: 15601605325944197656
-      m_GuidHigh: 4838784504388193305
-    m_Size: {x: 0.5, y: 0.5}
-    m_SpecifySize: 1
-    m_Name: Factory
-    m_Texture: {fileID: 2800000, guid: 12bf12180962d884190cb9a8ded02643, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5652715303985633650
-      m_GuidHigh: 12942385009543442561
-    m_SerializedTextureGuid:
-      m_GuidLow: 3279792929536316990
-      m_GuidHigh: 10721204874854636633
-    m_Size: {x: 0.5, y: 0.5}
+      m_GuidLow: 13579623339104292841
+      m_GuidHigh: 11208282514718997739
+    m_Size: {x: 1, y: 1}
     m_SpecifySize: 1
     m_Name: Downtown
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4762990776108647396
+      m_GuidHigh: 3001012884499298189
+    m_SerializedTextureGuid:
+      m_GuidLow: 11760197029224703976
+      m_GuidHigh: 11708875223695324107
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: Factory
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4742784292148035138
+      m_GuidHigh: 3194483591133917115
+    m_SerializedTextureGuid:
+      m_GuidLow: 13692343825739610528
+      m_GuidHigh: 9281001278600698586
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: Hospital
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5246144083988197527
+      m_GuidHigh: 8897242731955821740
+    m_SerializedTextureGuid:
+      m_GuidLow: 6882652827120817288
+      m_GuidHigh: 9691007753953428057
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: Housing
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4648297678318897821
+      m_GuidHigh: 11263470794724218249
+    m_SerializedTextureGuid:
+      m_GuidLow: 8080630161483454298
+      m_GuidHigh: 16465557154520552968
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: NuclearPower
     m_Texture: {fileID: 0}
