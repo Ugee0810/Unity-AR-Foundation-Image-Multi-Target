@@ -15,12 +15,18 @@ public class ARTrackedMultiImageManager : MonoBehaviour
     Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
     ARTrackedImageManager trackedImageManager;
 
-    public Transform target;
-
-    public ARCameraManager CameraManager;
+    public static System.Action BTN;
+    public void STOP()
+    {
+        GameObject.FindGameObjectWithTag("VIDEO").GetComponent<VideoPlayer>().Stop();
+        trackedObject.SetActive(false);
+        temp = 0.0f;
+        isPlay = false;
+    }
 
     private void Awake()
     {
+        BTN = () => { STOP(); };
         // AR Session Origin 오브젝트에 컴포넌트로 적용했을 때 사용 가능
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         // trackedPrefabs 배열에 있는 모든 프리팹을 Instantiate()로 생성한 후

@@ -77,3 +77,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: NuclearPower
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5540305633770198957
+      m_GuidHigh: 12166976769130056330
+    m_SerializedTextureGuid:
+      m_GuidLow: 7950171216657673549
+      m_GuidHigh: 12203930983735664392
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: Hospital
+    m_Texture: {fileID: 0}
