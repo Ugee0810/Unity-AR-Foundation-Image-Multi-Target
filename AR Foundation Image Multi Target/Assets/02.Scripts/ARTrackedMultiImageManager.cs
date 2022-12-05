@@ -13,24 +13,30 @@ public class ARTrackedMultiImageManager : MonoBehaviour
 
     [Header("이미지를 인식했을 때 출력되는 오브젝트 목록")]
     Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
+
     ARTrackedImageManager trackedImageManager;
+
+    GameObject trackedObject;
+
+    bool isPlay;
+    float curTime = 0.0f;
 
     public static System.Action BTN;
     public void STOP()
     {
-        GameObject.FindGameObjectWithTag("VIDEO").GetComponent<VideoPlayer>().Stop();
         trackedObject.SetActive(false);
-        temp = 0.0f;
         isPlay = false;
+        curTime = 0.0f;
     }
 
     private void Awake()
     {
         BTN = () => { STOP(); };
+
         // AR Session Origin 오브젝트에 컴포넌트로 적용했을 때 사용 가능
         trackedImageManager = GetComponent<ARTrackedImageManager>();
-        // trackedPrefabs 배열에 있는 모든 프리팹을 Instantiate()로 생성한 후
-        // spawnedObjects Dictionary에 저장, 비활성화
+
+        // trackedPrefabs 배열에 있는 모든 프리팹을 Instantiate()로 생성한 후 spawnedObjects Dictionary에 저장, 비활성화
         // 카메라에 이미지가 인식되면 이미지와 동일한 이름의 key에 있는 value 오브젝트를 출력
         foreach (GameObject prefab in trackedPrefabs)
         {
@@ -55,27 +61,41 @@ public class ARTrackedMultiImageManager : MonoBehaviour
         trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
+    private void FixedUpdate()
+    {
+        if (isPlay && trackedObject.transform.GetChild(0).GetComponent<VideoPlayer>().isPlaying)
+        {
+            curTime += Time.deltaTime;
+            if (trackedObject.transform.GetChild(0).GetComponent<VideoPlayer>().length < curTime)
+            {
+                trackedObject.SetActive(false);
+                isPlay = false;
+                curTime = 0.0f;
+            }
+        }
+    }
+
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        // 카메라에 이미지가 인식되었을 때
-        foreach (var trackedImage in eventArgs.added)
-        {
-            UpdateImage(trackedImage);
-        }
+        //// 카메라에 이미지가 인식되었을 때
+        //foreach (ARTrackedImage trackedImage in eventArgs.added)
+        //{
+        //    UpdateImage(trackedImage);
+        //}
+
         // 카메라에 이미지가 인식되어 업데이트 중일 때
-        foreach (var trackedImage in eventArgs.updated)
+        foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
             UpdateImage(trackedImage);
         }
+
         //// 인식되고 있는 이미지가 카메라에서 사라졌을 때
-        //foreach (var trackedImage in eventArgs.removed)
+        //foreach (ARTrackedImage trackedImage in eventArgs.removed)
         //{
         //    spawnedObjects[trackedImage.name].SetActive(false);
         //}
     }
 
-    bool isPlay;
-    GameObject trackedObject;
     void UpdateImage(ARTrackedImage trackedImage)
     {
         if (isPlay) return;
@@ -89,24 +109,9 @@ public class ARTrackedMultiImageManager : MonoBehaviour
             trackedObject.SetActive(true);
             isPlay = true;
         }
-        else
-        {
-            //trackedObject.SetActive(false);
-        }
-    }
-
-    float temp = 0.0f;
-    private void FixedUpdate()
-    {
-        if (isPlay && trackedObject.transform.GetChild(0).GetComponent<VideoPlayer>().isPlaying)
-        {
-            temp += Time.deltaTime;
-            if (trackedObject.transform.GetChild(0).GetComponent<VideoPlayer>().length < temp)
-            {
-                trackedObject.SetActive(false);
-                isPlay = false;
-                temp = 0.0f;
-            }
-        }
+        //else
+        //{
+        //    trackedObject.SetActive(false);
+        //}
     }
 }
