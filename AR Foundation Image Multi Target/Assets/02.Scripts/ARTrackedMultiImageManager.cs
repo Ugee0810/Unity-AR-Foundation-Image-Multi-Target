@@ -16,6 +16,8 @@ public class ARTrackedMultiImageManager : MonoBehaviour
 
     ARTrackedImageManager trackedImageManager;
 
+    [SerializeField] GameObject go_Indicator;
+
     GameObject trackedObject;
 
     bool isPlay;
@@ -27,6 +29,7 @@ public class ARTrackedMultiImageManager : MonoBehaviour
         trackedObject.SetActive(false);
         isPlay = false;
         curTime = 0.0f;
+        go_Indicator.SetActive(true);
     }
 
     private void Awake()
@@ -71,6 +74,7 @@ public class ARTrackedMultiImageManager : MonoBehaviour
                 trackedObject.SetActive(false);
                 isPlay = false;
                 curTime = 0.0f;
+                go_Indicator.SetActive(true);
             }
         }
     }
@@ -108,6 +112,7 @@ public class ARTrackedMultiImageManager : MonoBehaviour
         {
             trackedObject.SetActive(true);
             isPlay = true;
+            go_Indicator.SetActive(false);
         }
         //else
         //{

@@ -293,6 +293,7 @@ MonoBehaviour:
   - {fileID: 3012957871007695356, guid: f193d3d1e59a0b9448e61b7125da558f, type: 3}
   - {fileID: 3012957871007695356, guid: a60845ca557604b48b0a3bd2972824b7, type: 3}
   - {fileID: 3012957871007695356, guid: 7969dedf58bb5c0488e5e55055d3893a, type: 3}
+  go_Indicator: {fileID: 1676497360}
 --- !u!114 &357676153
 MonoBehaviour:
   m_ObjectHideFlags: 0
