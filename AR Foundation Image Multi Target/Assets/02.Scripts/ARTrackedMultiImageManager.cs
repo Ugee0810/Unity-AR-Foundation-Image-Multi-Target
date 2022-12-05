@@ -26,10 +26,10 @@ public class ARTrackedMultiImageManager : MonoBehaviour
     public static System.Action BTN;
     public void STOP()
     {
-        trackedObject.SetActive(false);
         isPlay = false;
-        curTime = 0.0f;
         go_Indicator.SetActive(true);
+        trackedObject.SetActive(false);
+        curTime = 0.0f;
     }
 
     private void Awake()
@@ -71,21 +71,21 @@ public class ARTrackedMultiImageManager : MonoBehaviour
             curTime += Time.deltaTime;
             if (trackedObject.transform.GetChild(0).GetComponent<VideoPlayer>().length < curTime)
             {
-                trackedObject.SetActive(false);
                 isPlay = false;
-                curTime = 0.0f;
                 go_Indicator.SetActive(true);
+                trackedObject.SetActive(false);
+                curTime = 0.0f;
             }
         }
     }
 
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        //// 카메라에 이미지가 인식되었을 때
-        //foreach (ARTrackedImage trackedImage in eventArgs.added)
-        //{
-        //    UpdateImage(trackedImage);
-        //}
+        // 카메라에 이미지가 인식되었을 때
+        foreach (ARTrackedImage trackedImage in eventArgs.added)
+        {
+            UpdateImage(trackedImage);
+        }
 
         // 카메라에 이미지가 인식되어 업데이트 중일 때
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -110,9 +110,9 @@ public class ARTrackedMultiImageManager : MonoBehaviour
         // 이미지의 추적 상태가 추적중(Tracking)일 때
         if (trackedImage.trackingState == TrackingState.Tracking)
         {
-            trackedObject.SetActive(true);
             isPlay = true;
             go_Indicator.SetActive(false);
+            trackedObject.SetActive(true);
         }
         //else
         //{
