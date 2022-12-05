@@ -185,13 +185,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackedPrefabs:
   - {fileID: 3012957871007695356, guid: bf21ec3f1f5e5f44ab3587df137e638e, type: 3}
-  - {fileID: 3012957871007695356, guid: 55b3ec2bc3dab9244bb631ed4ef2048f, type: 3}
-  - {fileID: 3012957871007695356, guid: da2f8b7b2ba1aab48ae30dc5f336d89b, type: 3}
-  - {fileID: 3012957871007695356, guid: 387dc48ea72f35c458816541bf067fa7, type: 3}
-  - {fileID: 3012957871007695356, guid: a042fe288b9bab040a4aec3aee7bbcbb, type: 3}
-  - {fileID: 3012957871007695356, guid: 2c6510ba456cf7f43bab314f86b8d74c, type: 3}
-  target: {fileID: 1173283379}
-  CameraManager: {fileID: 1173283376}
+  - {fileID: 3012957871007695356, guid: 4b3b59360e9951f4da94f5f6c503ac81, type: 3}
+  - {fileID: 3012957871007695356, guid: c43729c971cf3e54697449d0019b11b8, type: 3}
+  - {fileID: 3012957871007695356, guid: 7472f537503c9fe4f84bb3497026c137, type: 3}
+  - {fileID: 3012957871007695356, guid: 05d93d298d1b2db48b51523173a648f1, type: 3}
+  - {fileID: 3012957871007695356, guid: f193d3d1e59a0b9448e61b7125da558f, type: 3}
+  - {fileID: 3012957871007695356, guid: a60845ca557604b48b0a3bd2972824b7, type: 3}
+  - {fileID: 3012957871007695356, guid: 7969dedf58bb5c0488e5e55055d3893a, type: 3}
 --- !u!114 &357676153
 MonoBehaviour:
   m_ObjectHideFlags: 0
